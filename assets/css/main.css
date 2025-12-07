@@ -324,13 +324,14 @@ p:last-child {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: var(--space-sm) 0;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
 .logo {
   flex-shrink: 0;
+  margin-right: var(--space-sm);
 }
 
 .logo img {
@@ -352,11 +353,11 @@ p:last-child {
 .nav-main {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: 0;
 }
 
 .nav-main a {
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-sm) var(--space-sm);
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-ink);
@@ -373,6 +374,7 @@ p:last-child {
   display: flex;
   align-items: center;
   gap: var(--space-md);
+  margin-left: auto;
 }
 
 .lang-selector {
