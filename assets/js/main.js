@@ -96,31 +96,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Form validation feedback (basic)
+  // Form validation visual feedback
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Basic validation check
-      const requiredFields = contactForm.querySelectorAll('[required]');
-      let isValid = true;
-      
-      requiredFields.forEach(function(field) {
+    // Add visual feedback on input
+    const requiredFields = contactForm.querySelectorAll('[required]');
+    requiredFields.forEach(function(field) {
+      field.addEventListener('blur', function() {
         if (!field.value.trim()) {
-          isValid = false;
-          field.style.borderColor = '#e85a24';
+          field.style.borderColor = '#ff0200';
         } else {
           field.style.borderColor = '';
         }
       });
-      
-      if (isValid) {
-        // TODO: Implement actual form submission
-        // For now, show a placeholder message
-        alert('Thank you for your enquiry! We will respond within 24 hours.');
-        contactForm.reset();
-      }
+      field.addEventListener('input', function() {
+        if (field.value.trim()) {
+          field.style.borderColor = '';
+        }
+      });
     });
   }
 });

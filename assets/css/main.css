@@ -519,11 +519,17 @@ p:last-child {
 /* Hero Checklist (right column) */
 .hero-checklist {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hero-checklist .hero-list {
-  margin-bottom: 0;
+  margin-bottom: var(--space-xl);
+}
+
+.hero-logo {
+  max-width: 280px;
+  height: auto;
 }
 
 /* Hero Video Placeholder */
