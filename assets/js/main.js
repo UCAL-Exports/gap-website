@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
       field.addEventListener('input', function() {
         if (field.value.trim()) {
           field.style.borderColor = '';
+        } else {
+          field.style.borderColor = '#ff0200';
         }
       });
     });
