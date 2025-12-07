@@ -1,0 +1,13 @@
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node modules (if added later)
+node_modules/
+
