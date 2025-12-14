@@ -391,7 +391,7 @@ p:last-child {
 .lang-selector {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .lang-link {
@@ -411,8 +411,8 @@ p:last-child {
 }
 
 .lang-link.active {
-  color: var(--color-primary);
-  background: var(--bg-blue-tint);
+  color: var(--color-secondary);
+  background: transparent;
   font-weight: 600;
 }
 
