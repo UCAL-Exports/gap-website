@@ -16,18 +16,17 @@
   text-align: center;
 }
 
-/* Flexbox direction reversals */
+/* Header - keep same layout as LTR (logo left, lang selector right) */
 [dir="rtl"] .header-inner {
-  flex-direction: row-reverse;
+  direction: ltr;
 }
 
 [dir="rtl"] .nav-main {
-  flex-direction: row-reverse;
+  direction: rtl;
 }
 
-[dir="rtl"] .nav-right {
-  margin-left: 0;
-  margin-right: auto;
+[dir="rtl"] .nav-main a {
+  direction: rtl;
 }
 
 [dir="rtl"] .hero-grid {
