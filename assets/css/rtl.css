@@ -1,0 +1,220 @@
+/* ==========================================================================
+   RTL (Right-to-Left) Support for Arabic
+   ========================================================================== */
+
+/* Base RTL direction is set via dir="rtl" on <html> */
+
+/* Text alignment adjustments */
+[dir="rtl"] .section-header,
+[dir="rtl"] .hero-content,
+[dir="rtl"] .contact-info,
+[dir="rtl"] .footer-brand {
+  text-align: right;
+}
+
+[dir="rtl"] .section-header {
+  text-align: center;
+}
+
+/* Flexbox direction reversals */
+[dir="rtl"] .header-inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-main {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-right {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .hero-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-actions {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .hero-checklist {
+  align-items: flex-start;
+}
+
+[dir="rtl"] .hero-logo {
+  align-self: flex-start;
+}
+
+/* List styling */
+[dir="rtl"] .hero-list li::before {
+  content: '✓';
+  margin-left: var(--space-sm);
+  margin-right: 0;
+}
+
+[dir="rtl"] .brand-list li {
+  text-align: right;
+}
+
+/* Cards and grids */
+[dir="rtl"] .benefit-card,
+[dir="rtl"] .service-card {
+  text-align: right;
+}
+
+/* Stat cards should remain centered */
+[dir="rtl"] .stat-card {
+  text-align: center;
+}
+
+[dir="rtl"] .benefit-icon,
+[dir="rtl"] .service-icon {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Process timeline - keep centered */
+[dir="rtl"] .process-step {
+  text-align: center;
+}
+
+/* FAQ */
+[dir="rtl"] .faq-question {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .faq-icon {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .faq-answer-inner {
+  text-align: right;
+}
+
+/* Contact section */
+[dir="rtl"] .contact-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .contact-item {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+[dir="rtl"] .contact-icon {
+  margin-left: var(--space-md);
+  margin-right: 0;
+}
+
+[dir="rtl"] .contact-item-content {
+  text-align: right;
+}
+
+/* Form */
+[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .form-group label {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-form input,
+[dir="rtl"] .contact-form textarea {
+  text-align: right;
+}
+
+/* Footer */
+[dir="rtl"] .footer-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer-links {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-bottom {
+  flex-direction: row-reverse;
+}
+
+/* Team section - keep centered */
+[dir="rtl"] .team-member {
+  text-align: center;
+}
+
+/* Mobile menu */
+[dir="rtl"] .mobile-toggle {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Language selector */
+[dir="rtl"] .lang-selector {
+  flex-direction: row-reverse;
+}
+
+/* CTA Banner */
+[dir="rtl"] .cta-banner {
+  text-align: right;
+}
+
+[dir="rtl"] .cta-banner .container {
+  text-align: center;
+}
+
+/* Brands grid - keep centered */
+[dir="rtl"] .brand-column {
+  text-align: center;
+}
+
+[dir="rtl"] .brand-region {
+  justify-content: center;
+}
+
+[dir="rtl"] .brand-list {
+  text-align: center;
+}
+
+/* Stats */
+[dir="rtl"] .stats-grid {
+  direction: rtl;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  [dir="rtl"] .hero-content,
+  [dir="rtl"] .hero-checklist {
+    text-align: center;
+  }
+  
+  [dir="rtl"] .hero-actions {
+    justify-content: center;
+  }
+  
+  [dir="rtl"] .hero-logo {
+    align-self: center;
+  }
+  
+  [dir="rtl"] .benefit-card {
+    grid-template-columns: 1fr auto;
+  }
+  
+  [dir="rtl"] .benefit-icon {
+    grid-column: 2;
+  }
+  
+  [dir="rtl"] .benefit-card h4 {
+    grid-column: 1;
+    text-align: right;
+  }
+  
+  [dir="rtl"] .benefit-card p {
+    grid-column: 1 / -1;
+    text-align: right;
+  }
+}
+
